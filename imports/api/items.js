@@ -19,7 +19,7 @@ Items.helpers({
 Meteor.methods({
     'items.insert'({ item }) {
         const existingItem = Items.findOne({
-            productId: item.productId,
+            packagingId: item.packagingId,
             userId: item.userId,
             retrieved: false,
             payed: false,

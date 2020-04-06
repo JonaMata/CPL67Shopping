@@ -125,7 +125,7 @@ class PersonalList extends Component {
                             autoHighlight
                             autoSelect
                             value={this.state.product}
-                            options={this.props.products}
+                            options={this.props.products || []}
                             getOptionLabel={(option) => {
                                 if (typeof option === 'string') {
                                     return option;

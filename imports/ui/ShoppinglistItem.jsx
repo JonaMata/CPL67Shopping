@@ -23,18 +23,22 @@ class ShoppinglistItem extends Component {
     render() {
         const {packaging, classes} = this.props;
         return (
-            <ListItem>
-                <ListItemIcon>
-                    <Checkbox
-                        edge={'start'}
-                        checked={this.props.retrieved}
-                        tabIndex={-1}
-                        disableRipple
-                        onChange={this.handleRetrieved}
-                    />
-                </ListItemIcon>
-                <ListItemText className={this.props.retrieved ? classes.strikethrough : ''} primary={`${this.props.retrieved ? packaging.retrieved() : packaging.toRetrieve()} x ${packaging.name} ${packaging.product().name}`}/>
-            </ListItem>
+            <label htmlFor={`check_${packaging._id}`}>
+                <ListItem>
+                    <ListItemIcon>
+                        <Checkbox
+                            id={`check_${packaging._id}`}
+                            edge={'start'}
+                            checked={this.props.retrieved}
+                            tabIndex={-1}
+                            disableRipple
+                            onChange={this.handleRetrieved}
+                        />
+                    </ListItemIcon>
+                    <ListItemText className={this.props.retrieved ? classes.strikethrough : ''}
+                                  primary={`${this.props.retrieved ? packaging.retrieved() : packaging.toRetrieve()} x ${packaging.name} ${packaging.product().name}`}/>
+                </ListItem>
+            </label>
         );
     }
 }
