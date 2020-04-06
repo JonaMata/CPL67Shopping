@@ -302,9 +302,9 @@ class PersonalList extends Component {
 
 export default withStyles(style)(withRouter(withTracker(({match}) => {
     Meteor.subscribe('users');
-    Meteor.subscribe('items');
-    Meteor.subscribe('packagings');
     Meteor.subscribe('products');
+    Meteor.subscribe('packagings');
+    Meteor.subscribe('items');
     const user = Users.findOne({name: match.params.user});
     return {
         user: user,
