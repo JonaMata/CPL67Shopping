@@ -27,7 +27,7 @@ class PersonallistItem extends Component {
         const {item, classes} = this.props;
         return (
             <ListItem>
-                <ListItemText className={item.retrieved ? classes.strikethrough : ''} primary={`${item.amount} x ${item.packaging().name} ${item.packaging().product().name}`}/>
+                <ListItemText className={item.retrieved ? classes.strikethrough : ''} primary={`${item.amount} x ${item.packaging() ? item.packaging().name : ''} ${item.packaging().product() ? item.packaging().product().name : ''}`}/>
                 <ListItemSecondaryAction>
                     <IconButton disabled={item.retrieved} edge={'end'} aria-label={'delete'} onClick={this.handleDelete}>
                         <DeleteIcon/>
