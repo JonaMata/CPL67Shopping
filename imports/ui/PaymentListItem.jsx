@@ -20,7 +20,7 @@ class PaymentListItem extends Component {
             <ListItem>
                 <ListItemText primary={`${packaging.retrieved()} x ${packaging.name} ${packaging.product().name}`}/>
                 <ListItemSecondaryAction>
-                    <TextField edge={'end'} label={'Price'} type={'number'} value={this.props.value} onChange={this.props.onChange}/>
+                    <TextField edge={'end'} label={'Price'} type={'number'} value={this.props.value || ''} onChange={this.props.onChange}/>
                 </ListItemSecondaryAction>
             </ListItem>
         );

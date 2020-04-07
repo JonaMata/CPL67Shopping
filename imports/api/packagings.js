@@ -56,5 +56,17 @@ Meteor.methods({
                 },
             });
         });
-    }
+    },
+    'packagings.setPayed'({packaging}) {
+        Items.update({
+            packagingId: packaging._id,
+            retrieved: true,
+        }, {
+            $set: {
+                payed: true,
+            },
+        }, {
+            multi: true,
+        });
+    },
 });
