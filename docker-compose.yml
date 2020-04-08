@@ -9,6 +9,7 @@ services:
       - MONGO_URL=mongodb://mongo:27017/meteor
 
   mongo:
+    build: cpl67shopping-mongodb
     image: mongo:latest
     args:
       - --storageEngine wiredTiger
