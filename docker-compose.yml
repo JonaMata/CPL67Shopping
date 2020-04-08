@@ -12,7 +12,7 @@ services:
     build: cpl67shopping-mongodb
     image: mongo:latest
     args:
-      - --storageEngine wiredTiger
+      storageEngine: wiredTiger
 
 
 networks:
