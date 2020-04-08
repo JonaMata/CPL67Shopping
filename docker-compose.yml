@@ -5,12 +5,16 @@ app:
   environment:
     - ROOT_URL=https://shopping.67.campuslaan.nl
     - MONGO_URL=mongodb://mongo:27017/meteor
+  networks:
+    - webaccess
 
 mongo:
   image: mongo:latest --storageEngine=wireTiger
+  networks:
+    - webaccess
 
 
 networks:
-  default:
+  webaccess:
     external:
       name: webaccess
