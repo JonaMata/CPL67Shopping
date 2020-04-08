@@ -44,7 +44,7 @@ class App extends Component {
                         <AppBar position={'sticky'}>
                             <Toolbar>
                                 <Typography variant={'h6'} noWrap>
-                                    CPL67 Boodschappen
+                                    🛒 CPL67 Boodschappen
                                 </Typography>
                                 <IconButton color={'inherit'} component={Link} to={'/'}>
                                     <PersonIcon/>
