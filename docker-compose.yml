@@ -1,20 +1,18 @@
-app:
-  image: jonamata/cpl67shopping
-  links:
-    - mongo
-  environment:
-    - ROOT_URL=https://shopping.67.campuslaan.nl
-    - MONGO_URL=mongodb://mongo:27017/meteor
-  networks:
-    - webaccess
+version: "1"
+services:
+  app:
+    image: jonamata/cpl67shopping
+    links:
+      - mongo
+    environment:
+      - ROOT_URL=https://shopping.67.campuslaan.nl
+      - MONGO_URL=mongodb://mongo:27017/meteor
 
-mongo:
-  image: mongo:latest --storageEngine=wireTiger
-  networks:
-    - webaccess
+  mongo:
+    image: mongo:latest --storageEngine=wireTiger
 
 
 networks:
-  webaccess:
+  default:
     external:
       name: webaccess
