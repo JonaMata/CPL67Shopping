@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
-    <Date>2020-04-11</Date>
     <Beta>False</Beta>
     <Category>Productivity: Tools</Category>
     <Name>CPL67Shopping</Name>
     <Project>https://github.com/JonaMata/CPL67Shopping/</Project>
-    <Changes>
-        [font size=3]2015.06.15[/font]
-        - Initial Release
-    </Changes>
-    <Overview>
-        The CPL67Shopping list application
-    </Overview>
     <Description>
         The CPL67Shopping list application
     </Description>
@@ -21,7 +13,7 @@
     <Support>https://github.com/JonaMata/CPL67Shopping/</Support>
     <TemplateURL>https://raw.githubusercontent.com/JonaMata/CPL67Shopping/master/CPL67Shopping.xml</TemplateURL>
     <Privileged>false</Privileged>
-    <Shell>sh</Shell>
+    <Network>webaccess</Network>
     <Config Name="Application URL" Target="ROOT_URL" Default="http://localhost" Mode="" Description="The url on which the application will be served" Type="Variable" Display="always" Required="true" Mask="false"/>
     <Config Name="MongoDB Url" Target="MONGO_URL" Default="mongodb://mongoDB" Mode="" Description="The url of the MongoDB instance" Type="Variable" Display="always" Required="true" Mask="false"/>
     <Data/>
