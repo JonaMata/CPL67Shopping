@@ -2,7 +2,7 @@
 <Containers>
     <Date>2020-04-11</Date>
     <Beta>False</Beta>
-    <Category></Category>
+    <Category>Productivity: Tools</Category>
     <Name>CPL67Shopping</Name>
     <Project>https://github.com/JonaMata/CPL67Shopping/</Project>
     <Changes>
@@ -19,22 +19,12 @@
     <GitHub>https://github.com/limetech/dockerapp-plex</GitHub>
     <Repository>https://github.com/JonaMata/CPL67Shopping/</Repository>
     <Support>https://github.com/JonaMata/CPL67Shopping/</Support>
-    <BindTime>true</BindTime>
+    <TemplateURL>https://raw.githubusercontent.com/JonaMata/CPL67Shopping/master/CPL67Shopping.xml</TemplateURL>
     <Privileged>false</Privileged>
-    <Networking>
-        <Mode>host</Mode>
-        <Publish/>
-    </Networking>
-    <Environment>
-        <Variable>
-            <Name>ROOT_URL</Name>
-            <Value/>
-        </Variable>
-        <Variable>
-            <Name>MONGO_URL</Name>
-            <Value/>
-        </Variable>
-    </Environment>
+    <Network>bridge</Network>
+    <Shell>sh</Shell>
+    <Config Name="Application URL" Target="ROOT_URL" Default="http://localhost" Mode="" Description="The url on which the application will be served" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="MongoDB Url" Target="MONGO_URL" Default="mongodb://mongoDB" Mode="" Description="The url of the MongoDB instance" Type="Variable" Display="always" Required="true" Mask="false"/>
     <Data/>
     <WebUI>http://[IP]:[PORT:8080]</WebUI>
     <Banner/>
