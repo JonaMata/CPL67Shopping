@@ -9,7 +9,7 @@
     </Description>
     <Registry>https://github.com/JonaMata/CPL67Shopping/</Registry>
     <GitHub>https://github.com/JonaMata/CPL67Shopping/</GitHub>
-    <Repository>docker.home.jonathanm.nl/cpl67shopping/</Repository>
+    <Repository>docker.home.jonathanm.nl/cpl67shopping</Repository>
     <Support>https://github.com/JonaMata/CPL67Shopping/</Support>
     <TemplateURL>https://raw.githubusercontent.com/JonaMata/CPL67Shopping/master/CPL67Shopping.xml</TemplateURL>
     <Privileged>false</Privileged>
