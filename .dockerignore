@@ -3,5 +3,4 @@
 .git
 Dockerfile
 meteor/local
-tests
 node_modules
