@@ -14,8 +14,8 @@
     <TemplateURL>https://raw.githubusercontent.com/JonaMata/CPL67Shopping/master/CPL67Shopping.xml</TemplateURL>
     <Privileged>false</Privileged>
     <Network>webaccess</Network>
-    <Config Name="Application URL" Target="ROOT_URL" Default="http://localhost" Mode="" Description="The url on which the application will be served" Type="Variable" Display="always" Required="true" Mask="false"/>
-    <Config Name="MongoDB Url" Target="MONGO_URL" Default="mongodb://mongoDB" Mode="" Description="The url of the MongoDB instance" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="Application URL" Target="ROOT_URL" Default="https://shopping.67.campuslaan.nl" Mode="" Description="The url on which the application will be served" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="MongoDB Url" Target="MONGO_URL" Default="mongodb://CCPL67Shopping-MongoDB" Mode="" Description="The url of the MongoDB instance" Type="Variable" Display="always" Required="true" Mask="false"/>
     <Data/>
     <WebUI>http://[IP]:[PORT:8080]</WebUI>
     <Banner/>
