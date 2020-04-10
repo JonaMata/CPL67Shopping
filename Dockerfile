@@ -6,6 +6,8 @@ RUN curl "https://install.meteor.com/?release=$meteorVersion" | sh
 
 WORKDIR /usr/src/app
 COPY ./.meteor ./.meteor
+COPY ./package.json ./
+COPY ./package-lock.json ./
 COPY ./server ./server
 COPY ./client ./client
 COPY ./imports ./imports
