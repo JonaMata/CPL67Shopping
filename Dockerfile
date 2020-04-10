@@ -10,6 +10,7 @@ COPY ./server ./server
 COPY ./client ./client
 COPY ./imports ./imports
 ENV METEOR_ALLOW_SUPERUSER=true
+RUN meteor npm install
 RUN meteor build build --directory
 
 
