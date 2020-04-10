@@ -1,0 +1,29 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Docker Login
+      uses: Azure/docker-login@v1
+      with:
+        # Container registry username
+        username: ${{ secrets.DockerUsername }}
+        # Container registry password
+        password: ${{ secrets.DockerPassword }} 
+        # Container registry server url
+        login-server: docker.home.jonathanm.nl
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag docker.home.jonathanm.nl/cpl67shopping:$(date +%s) --tag docker.home.jonathanm.nl/cpl67shopping:latest
+    - name: Publish the Docker image
+      run: docker push docker.home.jonathanm.nl/cpl67shopping
