@@ -6,7 +6,6 @@ RUN curl "https://install.meteor.com/?release=$meteorVersion" | sh
 
 WORKDIR /usr/src/app
 COPY ./.meteor ./.meteor
-COPY ./node_modules ./node_modules
 COPY ./tests ./tests
 COPY ./server ./server
 COPY ./client ./client
