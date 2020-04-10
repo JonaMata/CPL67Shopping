@@ -21,7 +21,6 @@
     <Support>https://github.com/JonaMata/CPL67Shopping/</Support>
     <TemplateURL>https://raw.githubusercontent.com/JonaMata/CPL67Shopping/master/CPL67Shopping.xml</TemplateURL>
     <Privileged>false</Privileged>
-    <Network>bridge</Network>
     <Shell>sh</Shell>
     <Config Name="Application URL" Target="ROOT_URL" Default="http://localhost" Mode="" Description="The url on which the application will be served" Type="Variable" Display="always" Required="true" Mask="false"/>
     <Config Name="MongoDB Url" Target="MONGO_URL" Default="mongodb://mongoDB" Mode="" Description="The url of the MongoDB instance" Type="Variable" Display="always" Required="true" Mask="false"/>
